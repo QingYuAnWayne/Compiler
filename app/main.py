@@ -1,6 +1,10 @@
 import Function
+import os
 
-file = open("origin.txt", "r")
+dirlist = []
+files = os.listdir('.')
+for f in files:
+    file = f
 token = ""
 for line in file:
     i = 0
