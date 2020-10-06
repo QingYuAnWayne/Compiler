@@ -36,13 +36,16 @@ with open($input , 'r') as file:
                 try:
                     if token == ':' and line[i] == '=':
                         print("Assign")
+                        i += 1
+                    else:
+                        symbol = Function.reserver(token)
+                        if symbol == 'Unknown':
+                            exit(-1)
+                        else:
+                            print(symbol)
                 except IndexError:
                     pass
-                symbol = Function.reserver(token)
-                if symbol == 'Unknown':
-                    exit(-1)
-                else:
-                    print(symbol)
+                
 
 
 
