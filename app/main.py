@@ -19,13 +19,30 @@ with open($input , 'r') as file:
                 symbol = Function.reserver(token)
                 if symbol == 'Unknown':
                     print("Ident("+token+")")
+                
+            elif line[i].isdigit():
+                try:
+                    while line[i].isdigit():
+                        token += line[i]
+                        i += 1
+                except IndexError:
+                    pass
+                token = int(token, 10)
+                print("Int("+str(token)+")")
+
+            else:
+                token += line[i]
+                i += 1
+                try:
+                    if token == ':' and line[i] == '=':
+                        print("Assign")
+                except IndexError:
+                    pass
+                symbol = Function.reserver(token)
+                if symbol == 'Unknown':
+                    exit(-1)
                 else:
                     print(symbol)
-            elif line[i].isdigit():
-                while line[i].isdigit():
-                    token += line[i]
-                    i += 1
-                print("Int("+token+")")
 
 
 
