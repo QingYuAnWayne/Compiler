@@ -1,5 +1,6 @@
 import Function
 position = $input
+print(position)
 with open(position , 'r') as file:
     token = ""
     for line in file:
