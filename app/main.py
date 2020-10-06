@@ -1,10 +1,6 @@
 import Function
-import os
 
-dirlist = []
-files = os.listdir('.')
-for f in files:
-    file = f
+with open($input , 'r') as file:
     token = ""
     for line in file:
         i = 0
