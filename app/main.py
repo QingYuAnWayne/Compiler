@@ -1,6 +1,6 @@
 import Function
 
-with open($input , 'r') as file:
+with open('$input' , 'r') as file:
     token = ""
     for line in file:
         i = 0
