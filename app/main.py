@@ -25,6 +25,7 @@ def main():
                     if symbol == 'Unknown':
                         print("Ident("+token+")")
                     else:
+                        print(2)
                         print(symbol)
 
                     
@@ -48,8 +49,9 @@ def main():
                         else:
                             symbol = Function.reserver(token)
                             if symbol == 'Unknown':
-                                return
+                                return 0
                             else:
+                                print(1)
                                 print(symbol)
                     except IndexError:
                         pass
