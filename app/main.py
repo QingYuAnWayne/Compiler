@@ -1,5 +1,6 @@
 import Function
-position = $input
+import sys
+position = sys.argv[1]
 print(position)
 with open(position , 'r') as file:
     token = ""
