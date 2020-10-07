@@ -5,7 +5,6 @@ import sys
 def main():
     position = sys.argv[1]
     # position = "F:\\Python codes\\Compiler\\1.txt"
-    print(position)
     with open(position , 'r') as file:
         token = ""
         for line in file:
