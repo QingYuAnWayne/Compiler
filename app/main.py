@@ -48,7 +48,7 @@ def main():
                         else:
                             symbol = Function.reserver(token)
                             if symbol == 'Unknown':
-                                exit(0)
+                                return
                             else:
                                 print(symbol)
                     except IndexError:
