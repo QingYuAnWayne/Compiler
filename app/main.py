@@ -1,7 +1,7 @@
 import Function
 import sys
 position = sys.argv[1]
-#position = "F:\\Python codes\\Compiler\\1.txt"
+# position = "F:\\Python codes\\Compiler\\1.txt"
 print(position)
 with open(position , 'r') as file:
     token = ""
@@ -23,7 +23,7 @@ with open(position , 'r') as file:
                 if symbol == 'Unknown':
                     print("Ident("+token+")")
                 else:
-                    print(token)
+                    print(symbol)
 
                 
             elif line[i].isdigit():
