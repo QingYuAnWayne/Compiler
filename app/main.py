@@ -1,6 +1,6 @@
 import Function
 import sys
- position = sys.argv[1]
+position = sys.argv[1]
 #position = "F:\\Python codes\\Compiler\\1.txt"
 print(position)
 with open(position , 'r') as file:
