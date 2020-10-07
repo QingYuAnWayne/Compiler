@@ -1,6 +1,7 @@
 import Function
 import sys
-position = sys.argv[1]
+ position = sys.argv[1]
+#position = "F:\\Python codes\\Compiler\\1.txt"
 print(position)
 with open(position , 'r') as file:
     token = ""
@@ -21,6 +22,9 @@ with open(position , 'r') as file:
                 symbol = Function.reserver(token)
                 if symbol == 'Unknown':
                     print("Ident("+token+")")
+                else:
+                    print(token)
+
                 
             elif line[i].isdigit():
                 try:
@@ -32,7 +36,7 @@ with open(position , 'r') as file:
                 token = int(token, 10)
                 print("Int("+str(token)+")")
 
-            else:
+            else:#识别符号
                 token += line[i]
                 i += 1
                 try:
